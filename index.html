@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhà hàng tiệc Lành Mỹ — Tiệc trọn gói tận nơi</title>
+<meta name="description" content="Nhà hàng tiệc lưu động Lành Mỹ — tiệc cưới, hỏi, liên hoan, tân gia trọn gói tận nơi tại Nghi Lộc, Nghệ An. Hotline 0985 034 644.">
+<meta property="og:title" content="Nhà hàng tiệc Lành Mỹ — Tiệc trọn gói tận nơi">
+<meta property="og:description" content="Nấu tươi tại chỗ · Mâm đầy đặn · Phục vụ tận tâm. Hotline 0985 034 644.">
+<meta property="og:image" content="Anh/z7485462624305_381515308a6ca5b6ee8458c7a755fbde.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-0:#0C1B16; --bg-1:#12281F; --bg-2:#16302A; --card:#132923;
+  --gold:#C9A24B; --gold-2:#E3C77A; --gold-soft:#B4923F;
+  --ivory:#F5F1E6; --muted:#AEB6A6; --line:#2A4034;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Be Vietnam Pro',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans); color:var(--ivory); background:var(--bg-0);
+  overflow-x:hidden; line-height:1.65; -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(120% 80% at 20% 0%, rgba(30,64,52,.55), transparent 60%),
+    radial-gradient(90% 60% at 90% 20%, rgba(20,45,36,.5), transparent 55%),
+    radial-gradient(100% 90% at 50% 100%, rgba(9,20,16,.9), transparent 60%);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.gold{color:var(--gold)}
+.serif{font-family:var(--serif)}
+.wrap{max-width:520px;margin:0 auto;padding:0 20px}
+section{position:relative}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 20px;transition:.35s ease;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(10,22,18,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .brand{font-family:var(--serif);font-size:20px;letter-spacing:2px;color:var(--gold);display:flex;align-items:center;gap:8px}
+.nav .brand img{height:34px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.nav .right{display:flex;align-items:center;gap:12px}
+.btn-book{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0C1B16;
+  font-weight:600;font-size:13px;padding:8px 16px;border-radius:30px;border:none;cursor:pointer;
+  box-shadow:0 4px 14px rgba(201,162,75,.3);transition:.25s}
+.btn-book:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,162,75,.45)}
+.burger{font-size:26px;color:var(--ivory);cursor:pointer;line-height:1;background:none;border:none}
+.menu-drawer{position:fixed;inset:0;z-index:60;background:rgba(9,18,14,.97);backdrop-filter:blur(6px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  opacity:0;pointer-events:none;transition:.4s}
+.menu-drawer.open{opacity:1;pointer-events:auto}
+.menu-drawer a{font-family:var(--serif);font-size:24px;color:var(--ivory);opacity:.85;transition:.25s}
+.menu-drawer a:hover{color:var(--gold);opacity:1;letter-spacing:1px}
+.menu-drawer .close{position:absolute;top:22px;right:24px;font-size:32px;color:var(--gold);cursor:pointer}
+
+/* ===== HERO ===== */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:90px 24px 60px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;
+  background-image:url('Anh/z7485462624305_381515308a6ca5b6ee8458c7a755fbde.jpg');
+  transform:scale(1.08);animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{to{transform:scale(1.2) translateY(-10px)}}
+.hero-bg::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(9,18,14,.72),rgba(9,18,14,.55) 40%,rgba(9,18,14,.95))}
+.hero-logo{height:120px;width:auto;margin-bottom:6px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5));
+  animation:floatY 5s ease-in-out infinite}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:52px;line-height:1;letter-spacing:4px;
+  background:linear-gradient(135deg,#F6E6B4,var(--gold) 50%,#9C7A2E);
+  -webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.hero .tag{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-2);margin-bottom:16px}
+.hero .slogan{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ivory);opacity:.92;margin-bottom:30px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.cta-primary,.cta-ghost{padding:13px 24px;border-radius:30px;font-weight:600;font-size:14px;transition:.25s;cursor:pointer}
+.cta-primary{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0C1B16;border:none;box-shadow:0 6px 18px rgba(201,162,75,.35)}
+.cta-primary:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(201,162,75,.5)}
+.cta-ghost{border:1.5px solid var(--gold);color:var(--gold);background:transparent}
+.cta-ghost:hover{background:var(--gold);color:#0C1B16}
+.scroll-ind{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:22px;animation:bob 1.8s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,8px);opacity:1}}
+
+/* ===== SECTION HEADINGS ===== */
+.sec{padding:64px 0}
+.eyebrow{text-align:center;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.sec-title{text-align:center;font-family:var(--serif);font-size:32px;font-weight:600;color:var(--ivory);margin-bottom:8px}
+.sec-title .u{display:block;width:56px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:14px auto 0}
+.sec-sub{text-align:center;color:var(--muted);font-size:15px;max-width:400px;margin:0 auto 34px}
+
+/* ===== WHY / FEATURES ===== */
+.feats{display:grid;grid-template-columns:1fr;gap:14px}
+.feat{background:linear-gradient(160deg,var(--bg-2),var(--card));border:1px solid var(--line);border-radius:16px;
+  padding:22px;display:flex;gap:16px;align-items:center;transition:.3s}
+.feat:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.feat .ic{font-size:30px;flex-shrink:0;width:54px;height:54px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle,rgba(201,162,75,.22),transparent 70%);border:1px solid var(--gold-soft)}
+.feat h3{font-family:var(--serif);font-size:19px;color:var(--gold-2);margin-bottom:3px}
+.feat p{font-size:14px;color:var(--muted)}
+
+/* ===== MENU ===== */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.tab{padding:7px 16px;border-radius:24px;font-size:13px;font-weight:500;cursor:pointer;
+  border:1px solid var(--line);color:var(--muted);background:transparent;transition:.25s}
+.tab.active{border-color:var(--gold);color:#0C1B16;background:linear-gradient(135deg,var(--gold),var(--gold-soft));font-weight:600}
+.menu-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  display:flex;gap:0;transition:.35s;position:relative;min-height:112px}
+.dish:hover{border-color:var(--gold);box-shadow:0 14px 34px rgba(0,0,0,.4);transform:translateY(-4px)}
+.dish .thumb{width:120px;flex-shrink:0;overflow:hidden;position:relative}
+.dish .thumb img{width:100%;height:100%;object-fit:cover;object-position:center;transition:.6s;cursor:zoom-in}
+.dish:hover .thumb img{transform:scale(1.12)}
+.dish .info{padding:15px 16px 15px 18px;display:flex;flex-direction:column;justify-content:center}
+.dish .info h4{font-family:var(--serif);font-size:18px;letter-spacing:.5px;color:var(--ivory);margin-bottom:5px}
+.dish .info p{font-size:12.8px;color:var(--muted);line-height:1.5}
+.dish .badge{position:absolute;top:10px;left:10px;background:rgba(201,162,75,.92);color:#0C1B16;
+  font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;letter-spacing:.5px;z-index:2}
+.menu-note{text-align:center;color:var(--muted);font-size:13px;margin-top:22px;font-style:italic}
+
+/* ===== GALLERY ===== */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gallery a{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:1/1}
+.gallery img{width:100%;height:100%;object-fit:cover;object-position:center;transition:.6s;cursor:zoom-in}
+.gallery a:hover img{transform:scale(1.15)}
+.gallery a::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(9,18,14,.6));opacity:0;transition:.3s}
+.gallery a:hover::after{opacity:1}
+.gallery a.tall{grid-row:span 2;aspect-ratio:auto}
+
+/* ===== STEPS ===== */
+.steps{position:relative;padding-left:14px}
+.steps::before{content:'';position:absolute;left:27px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(180deg,var(--gold),transparent)}
+.step{display:flex;gap:18px;margin-bottom:22px;position:relative}
+.step .num{width:44px;height:44px;flex-shrink:0;border-radius:50%;font-family:var(--serif);font-size:19px;
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  background:var(--bg-2);border:1.5px solid var(--gold);z-index:1}
+.step h4{font-family:var(--serif);font-size:18px;color:var(--gold-2);margin:6px 0 3px}
+.step p{font-size:13.5px;color:var(--muted)}
+
+/* ===== CONTACT ===== */
+.contact{text-align:center;background:linear-gradient(180deg,transparent,rgba(18,40,31,.5))}
+.phone-big{font-family:var(--serif);font-size:38px;color:var(--gold);letter-spacing:1px;display:inline-flex;
+  align-items:center;gap:12px;margin:6px 0 18px;transition:.25s}
+.phone-big:hover{color:var(--gold-2);transform:scale(1.03)}
+.socials{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.soc{display:flex;align-items:center;gap:8px;padding:11px 20px;border-radius:30px;font-size:14px;font-weight:500;
+  border:1px solid var(--line);background:var(--bg-2);transition:.25s}
+.soc:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.addr{color:var(--muted);font-size:14px;line-height:1.9}
+.addr .gold{font-weight:500}
+
+/* ===== FOOTER ===== */
+footer{text-align:center;padding:34px 20px 110px;border-top:1px solid var(--line);margin-top:40px}
+footer .fbrand{font-family:var(--serif);font-size:24px;color:var(--gold);letter-spacing:2px}
+footer .fslo{font-style:italic;color:var(--muted);font-size:13px;margin:6px 0 14px}
+footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
+
+/* ===== FLOATING ===== */
+.floating{position:fixed;right:16px;bottom:18px;z-index:40;display:flex;flex-direction:column;gap:12px}
+.fab{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:24px;box-shadow:0 6px 20px rgba(0,0,0,.4);transition:.25s;position:relative}
+.fab.call{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#0C1B16;animation:ring 2.2s infinite}
+.fab.zalo{background:#0068FF;color:#fff;font-weight:700;font-size:15px;font-family:var(--sans)}
+.fab:hover{transform:scale(1.1)}
+@keyframes ring{0%,100%{box-shadow:0 0 0 0 rgba(201,162,75,.5)}50%{box-shadow:0 0 0 12px rgba(201,162,75,0)}}
+.top-btn{position:fixed;left:16px;bottom:18px;z-index:40;width:46px;height:46px;border-radius:50%;
+  background:var(--bg-2);border:1px solid var(--gold);color:var(--gold);font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
+.top-btn.show{opacity:1;pointer-events:auto}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal{opacity:0;transform:translateY(34px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+/* ===== LIGHTBOX (chạm để phóng to) ===== */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,12,10,.94);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;transition:.3s;overflow:auto}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:94vw;max-height:90vh;width:auto;height:auto;border-radius:10px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);transition:transform .3s ease;cursor:zoom-in;
+  transform-origin:center center}
+.lightbox img.zoomed{max-width:none;max-height:none;cursor:zoom-out}
+.lightbox .lb-close{position:fixed;top:16px;right:20px;z-index:101;font-size:34px;line-height:1;
+  color:var(--gold);background:rgba(9,18,14,.7);border:1px solid var(--gold);border-radius:50%;
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.lightbox .lb-cap{position:fixed;bottom:16px;left:0;right:0;text-align:center;color:var(--ivory);
+  font-size:14px;padding:0 20px;pointer-events:none;text-shadow:0 2px 6px rgba(0,0,0,.8)}
+
+.nav-links{display:none}
+
+@media(min-width:600px){
+  .hero h1{font-size:66px}
+  .feats{grid-template-columns:repeat(3,1fr)}
+  .menu-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(min-width:1000px){
+  .wrap{max-width:1120px;padding:0 32px}
+  .nav{padding:14px 48px}
+  .nav-links{display:flex;gap:30px}
+  .nav-links a{font-size:14.5px;color:var(--ivory);opacity:.85;transition:.25s;letter-spacing:.3px}
+  .nav-links a:hover{color:var(--gold);opacity:1}
+  .burger{display:none}
+  .hero h1{font-size:96px;letter-spacing:8px}
+  .hero .tag{font-size:16px}
+  .hero .slogan{font-size:24px}
+  .hero-logo{height:170px}
+  .sec{padding:96px 0}
+  .sec-title{font-size:42px}
+  .sec-sub{max-width:580px;font-size:16px}
+  .feat{padding:30px}
+  .menu-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .dish{flex-direction:column;min-height:0}
+  .dish .thumb{width:100%;height:180px}
+  .dish .info{padding:18px 20px 22px}
+  .dish .info h4{font-size:20px}
+  .dish .info p{font-size:13.5px}
+  .gallery{grid-template-columns:repeat(4,1fr);gap:14px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-left:0}
+  .steps::before{display:none}
+  .step{flex-direction:column;align-items:flex-start;margin-bottom:0}
+  .phone-big{font-size:52px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#hero" class="brand">
+    <img class="logo-img" alt="Lành Mỹ" style="visibility:hidden">
+    LÀNH MỸ
+  </a>
+  <div class="nav-links">
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#thucdon">Thực đơn</a>
+    <a href="#khonggian">Không gian tiệc</a>
+    <a href="#quytrinh">Quy trình</a>
+    <a href="#lienhe">Liên hệ</a>
+  </div>
+  <div class="right">
+    <a href="tel:0985034644"><button class="btn-book">Đặt tiệc</button></a>
+    <button class="burger" onclick="openMenu()" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="menu-drawer" id="drawer">
+  <span class="close" onclick="closeMenu()">&times;</span>
+  <a href="#gioithieu" onclick="closeMenu()">Giới thiệu</a>
+  <a href="#thucdon" onclick="closeMenu()">Thực đơn</a>
+  <a href="#khonggian" onclick="closeMenu()">Không gian tiệc</a>
+  <a href="#quytrinh" onclick="closeMenu()">Quy trình</a>
+  <a href="#lienhe" onclick="closeMenu()">Liên hệ</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <img class="hero-logo logo-img" alt="Logo Lành Mỹ" style="visibility:hidden">
+  <div class="tag">Tiệc cưới · hỏi · liên hoan · tân gia</div>
+  <h1>LÀNH MỸ</h1>
+  <div class="slogan">"Gửi trọn yêu thương trong từng bàn tiệc"</div>
+  <div class="hero-cta">
+    <a href="tel:0985034644"><button class="cta-primary">📞 Gọi đặt tiệc</button></a>
+    <a href="#thucdon"><button class="cta-ghost">Xem thực đơn</button></a>
+  </div>
+  <a href="#gioithieu" class="scroll-ind">&#8964;</a>
+</section>
+
+<!-- GIỚI THIỆU -->
+<section class="sec" id="gioithieu">
+  <div class="wrap">
+    <div class="eyebrow reveal">Nhà hàng tiệc lưu động</div>
+    <h2 class="sec-title reveal">Vì sao chọn Lành Mỹ<span class="u"></span></h2>
+    <p class="sec-sub reveal">Chuyên tiệc trọn gói tận nhà và công sở tại Nghi Lộc, Nghệ An — nấu tươi tại chỗ, phục vụ tận tâm, mâm đầy đặn đáng đồng tiền.</p>
+    <div class="feats">
+      <div class="feat reveal d1"><div class="ic">🔥</div><div><h3>Nấu tươi tại chỗ</h3><p>Bếp dựng ngay tại tiệc, món ra nóng hổi, thơm ngon đúng vị.</p></div></div>
+      <div class="feat reveal d2"><div class="ic">🍽️</div><div><h3>Mâm đầy đặn</h3><p>Món nhiều, bày đẹp, khách ăn no – ngon – nhớ mãi.</p></div></div>
+      <div class="feat reveal d3"><div class="ic">❤️</div><div><h3>Phục vụ tận tâm</h3><p>Lo trọn gói từ A–Z, chủ nhà chỉ việc tiếp khách.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THỰC ĐƠN -->
+<section class="sec" id="thucdon">
+  <div class="wrap">
+    <div class="eyebrow reveal">Thực đơn</div>
+    <h2 class="sec-title reveal">Đầy đủ món ngon<span class="u"></span></h2>
+    <p class="sec-sub reveal">Đặc sản xứ Nghệ, hải sản tươi và các món tiệc quen thuộc — chế biến theo mùa, thực đơn linh hoạt theo yêu cầu từng tiệc.</p>
+
+    <div class="tabs reveal">
+      <button class="tab active" data-f="all">Tất cả</button>
+      <button class="tab" data-f="main">Thịt &amp; món chính</button>
+      <button class="tab" data-f="sea">Hải sản</button>
+      <button class="tab" data-f="spec">Đặc sản Nghệ</button>
+      <button class="tab" data-f="veg">Rau &amp; tráng miệng</button>
+    </div>
+
+    <div class="menu-grid" id="grid">
+
+      <!-- THỊT & MÓN CHÍNH -->
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><span class="badge">Đặc sắc</span><img src="Anh/z7740269589531_4ae54e516bd44089dd0e2d515fb47d6c.jpg" alt="Bê thui tái mè"></div>
+        <div class="info"><h4>Bê thui tái mè</h4><p>Bê thui thái lát rắc mè rang thơm bùi, kèm dưa chuột, xoài xanh, tía tô.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/z7545871410079_3121ce8cccd8c9e1b599707da8f53b39.jpg" alt="Bê thui"></div>
+        <div class="info"><h4>Bê thui</h4><p>Thui than truyền thống — da vàng giòn, thịt hồng ngọt, cuốn bánh tráng rau thơm.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/z7931971919954_7d80ddaeb3984d5126c494ef1de42edb.jpg" alt="Cà ri bò"></div>
+        <div class="info"><h4>Cà ri bò (bếp nến)</h4><p>Bò hầm mềm, nước cà ri vàng sánh, kèm cà rốt, khoai, nấm — ăn với bánh mì nóng.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/z7743668304482_05b53a5e27522068fd369b231053d778.jpg" alt="Bò sốt vang"></div>
+        <div class="info"><h4>Bò sốt vang</h4><p>Bò hầm mềm, nước sốt đỏ nâu sánh béo, ăn kèm bún hoặc xôi chà bông.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/z8059681774002_3f2efae39356987f6207a36efdf3e436.jpg" alt="Bò hầm"></div>
+        <div class="info"><h4>Bò hầm</h4><p>Bò hầm mềm thái lát, rắc gừng thái sợi thơm — bày đĩa hàng loạt, đơn giản mà đậm vị.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/z8059681866995_9578cd54b8acfc553ca503619cb77a20.jpg" alt="Gà luộc chặt miếng"></div>
+        <div class="info"><h4>Gà luộc chặt miếng</h4><p>Gà luộc da vàng óng, chặt miếng rắc lá chanh, ăn kèm bún và muối tiêu chanh.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><span class="badge">Hot</span><img src="Anh/z7751900401524_d97162359081501634aa3e6dfd143f9c.jpg" alt="Bò kéo pháo"></div>
+        <div class="info"><h4>Bò kéo pháo</h4><p>Gỏi bò – cà pháo giòn, sốt chua cay mặn ngọt hài hòa, màu sắc bắt mắt.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/ngua-xao.jpg" alt="Ngựa xào"></div>
+        <div class="info"><h4>Ngựa xào</h4><p>Thịt ngựa xào cà pháo và rau thơm, màu nâu đậm đà, lạ miệng.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="main">
+        <div class="thumb"><img src="Anh/z7740270754060_2030e2d4ad360a62a7e401d671eb649e.jpg" alt="Nhộng xào"></div>
+        <div class="info"><h4>Nhộng xào</h4><p>Nhộng tằm xào băm nhỏ, rắc ớt đỏ tươi, thơm bùi béo, ăn kèm dưa chuột.</p></div>
+      </div>
+
+      <!-- HẢI SẢN -->
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><span class="badge">Mới</span><img src="Anh/z7897663970076_dc90609902708c34375e6685061caed1.jpg" alt="Tôm sốt chanh dây"></div>
+        <div class="info"><h4>Tôm sốt chanh dây</h4><p>Tôm chiên phủ sốt chanh dây vàng óng, chua ngọt lạ miệng, màu rất bắt mắt.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/z7740270742961_c9716d08a9c3500b2577e05d88f7ae0e.jpg" alt="Tôm chiên khoai sợi"></div>
+        <div class="info"><h4>Tôm chiên khoai sợi</h4><p>Tôm chiên vàng giòn xếp hoa trên ổ khoai sợi — giòn rụm, đẹp mắt.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/muc-xao.jpg" alt="Mực xào ngũ sắc"></div>
+        <div class="info"><h4>Mực xào ngũ sắc</h4><p>Mực lá loại A xào ớt chuông đỏ vàng và rau xanh — đa màu, giòn dai thơm.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/z8059681869336_463cf99d13cc36b28df831387faea815.jpg" alt="Cá bống mú hấp xì dầu Hồng Kông"></div>
+        <div class="info"><h4>Cá bống mú hấp xì dầu Hồng Kông</h4><p>Cá bống mú nguyên con hấp kiểu Hồng Kông, chan xì dầu nóng, hành gừng thơm, kèm nấm hương.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/z8059681774808_16f9c5bb68848b0eeb7518684456c6b5.jpg" alt="Mực nướng muối ớt"></div>
+        <div class="info"><h4>Mực nướng muối ớt</h4><p>Mực nướng thái miếng tẩm muối ớt đậm đà, dai giòn thơm nồng.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/muc-hap-hanh.jpg" alt="Mực ống hấp hành"></div>
+        <div class="info"><h4>Mực ống hấp hành</h4><p>Mực ống tươi hấp hành lá, dai giòn ngọt tự nhiên, đặt bếp cồn giữ nóng tại bàn.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/z8059681772102_5e19344f3edb71f805e23ee492ec3798.jpg" alt="Ốc hương hấp sả"></div>
+        <div class="info"><h4>Ốc hương hấp sả</h4><p>Ốc hương tươi hấp sả, ngọt tự nhiên giòn sần sật, chấm mắm gừng cay.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><span class="badge">Đặc sắc</span><img src="Anh/lau-ca-tam.jpg" alt="Lẩu cá tầm"></div>
+        <div class="info"><h4>Lẩu cá tầm</h4><p>Cá tầm tươi thịt chắc ngọt, nước lẩu thanh chua nhẹ, ăn kèm rau tươi và bún nóng.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/z7910587104003_5afd9bef417db142a16049957303b0dc.jpg" alt="Cá lóc sốt thái"></div>
+        <div class="info"><h4>Cá lóc sốt thái</h4><p>Cá lóc chiên nguyên con giòn, ổ nộm cà rốt đu đủ, sốt thái chua cay ngọt.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/z7740269266006_0951288ca6e59b3ef45f0ad10e8acde0.jpg" alt="Ốc bươu hấp sả"></div>
+        <div class="info"><h4>Ốc bươu hấp sả</h4><p>Ốc bươu giòn ngọt tự nhiên, hấp sả lá chanh thơm lừng, chấm mắm gừng cay.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img src="Anh/oc-huong.jpg" alt="Ốc hương xào sả"></div>
+        <div class="info"><h4>Ốc hương xào sả</h4><p>Ốc hương xào sả ớt thơm nồng, xếp kèm hoa cà rốt tỉa đẹp mắt.</p></div>
+      </div>
+
+      <!-- ĐẶC SẢN NGHỆ -->
+      <div class="dish reveal" data-cat="spec">
+        <div class="thumb"><img src="Anh/z7545871673670_92ad3dc86e00c1bbf3f56799dddec5fb.jpg" alt="Lươn cuộn"></div>
+        <div class="info"><h4>Lươn cuộn</h4><p>Khúc lươn cuộn lá om nước nâu đỏ sánh, sợi măng gừng thơm, đậm đà xứ Nghệ.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="spec">
+        <div class="thumb"><img src="Anh/z7740270907030_d3ec85472bdc9b55b4f82ce1b2146b81.jpg" alt="Chim sẻ RuTi"></div>
+        <div class="info"><h4>Chim sẻ RuTi</h4><p>Chim sẻ rim sả ớt ngũ vị, da giòn tan, thịt mềm thơm — mồi bia lý tưởng.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="spec">
+        <div class="thumb"><img src="Anh/z7931971978172_7f82dcf2574d9d4450b4756dd9a2c38b.jpg" alt="Lườn ngỗng Nga xông khói"></div>
+        <div class="info"><h4>Lườn ngỗng Nga xông khói</h4><p>Lườn ngỗng xông khói nâu vàng, vị khói đậm, béo nhẹ, thái lát kèm dưa chuột.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="spec">
+        <div class="thumb"><img src="Anh/ruoi.jpg" alt="Rươi trứng xúc bánh đa"></div>
+        <div class="info"><h4>Rươi trứng xúc bánh đa</h4><p>Rươi xào trứng béo ngậy, bánh đa giòn thơm — món theo mùa, đậm vị truyền thống.</p></div>
+      </div>
+
+      <!-- RAU & TRÁNG MIỆNG -->
+      <div class="dish reveal" data-cat="veg">
+        <div class="thumb"><img src="Anh/z7743668293546_d99cdefbc5172623c99636445b20d6c6.jpg" alt="Rau bầu non xào tỏi"></div>
+        <div class="info"><h4>Rau bầu non xào tỏi</h4><p>Bầu non / dưa bao tử xào tỏi ớt, xanh vàng tươi mát, thanh nhẹ.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="veg">
+        <div class="thumb"><img src="Anh/z7740269275359_25504a91c1efe92a4d6c19708133e3c4.jpg" alt="Ngọn khoai xào tỏi"></div>
+        <div class="info"><h4>Ngọn khoai xào tỏi</h4><p>Ngọn khoai lang xanh mướt xào tỏi — giòn ngọt, thơm tỏi phi.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="veg">
+        <div class="thumb"><img src="Anh/z7931972035265_5f7444cbada915cbc55d5fdbcae6f263.jpg" alt="Nộm măng"></div>
+        <div class="info"><h4>Nộm măng</h4><p>Măng tươi trộn giòn, chua cay nhẹ — món giải ngán trong mâm tiệc.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="veg">
+        <div class="thumb"><img src="Anh/z7545871532209_54c7b2ccb8e6f12b973725f2560fc719.jpg" alt="Xôi ngô đậu"></div>
+        <div class="info"><h4>Xôi ngô đậu</h4><p>Xôi trắng dẻo trộn ngô ngọt và đậu xanh, thơm lá dứa.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="veg">
+        <div class="thumb"><img src="Anh/z8059681859528_8cbf57fea4cc96fe318df755bcf6d9af.jpg" alt="Salad"></div>
+        <div class="info"><h4>Salad</h4><p>Rau trộn tươi xanh mát, vị chua nhẹ — thanh miệng giữa bữa tiệc.</p></div>
+      </div>
+
+    </div>
+    <p class="menu-note reveal">Thực đơn có thể điều chỉnh theo số mâm, ngân sách và khẩu vị của gia đình. Liên hệ để được tư vấn chi tiết.</p>
+  </div>
+</section>
+
+<!-- KHÔNG GIAN -->
+<section class="sec" id="khonggian">
+  <div class="wrap">
+    <div class="eyebrow reveal">Không gian tiệc</div>
+    <h2 class="sec-title reveal">Trọn vẹn từng bàn tiệc<span class="u"></span></h2>
+    <p class="sec-sub reveal">Rạp cưới lung linh, đội ngũ chuyên nghiệp, mâm cỗ chỉn chu — hình ảnh thật từ các tiệc Lành Mỹ đã phục vụ.</p>
+    <div class="gallery">
+      <a class="tall reveal" href="Anh/z7485461948358_b6428554b72850b80530a792c5a9b68d.jpg" target="_blank"><img src="Anh/z7485461948358_b6428554b72850b80530a792c5a9b68d.jpg" alt="Toàn cảnh rạp tiệc"></a>
+      <a class="reveal d1" href="Anh/z7485462374127_8b81a60577ea6cd9c3d68dcb3cfc2823.jpg" target="_blank"><img src="Anh/z7485462374127_8b81a60577ea6cd9c3d68dcb3cfc2823.jpg" alt="Đội ngũ phục vụ"></a>
+      <a class="reveal d2" href="Anh/z7910587098744_367ecc5b7d5114500b8fb7c467af1862.jpg" target="_blank"><img src="Anh/z7910587098744_367ecc5b7d5114500b8fb7c467af1862.jpg" alt="Mâm tiệc ngoài trời"></a>
+      <a class="reveal d1" href="Anh/z7485462342268_1bd03ec204c36bcbcc37d1d4c687e9b6.jpg" target="_blank"><img src="Anh/z7485462342268_1bd03ec204c36bcbcc37d1d4c687e9b6.jpg" alt="Mâm tiệc đông khách"></a>
+      <a class="tall reveal d2" href="Anh/z7932934431317_eabacba25ad4e50d44db63dba7c76500.jpg" target="_blank"><img src="Anh/z7932934431317_eabacba25ad4e50d44db63dba7c76500.jpg" alt="Bàn tiệc trong nhà"></a>
+      <a class="reveal d3" href="Anh/z7931971918839_136948ebd10796ce5e4269416d52a873.jpg" target="_blank"><img src="Anh/z7931971918839_136948ebd10796ce5e4269416d52a873.jpg" alt="Mâm tiệc đầy đủ"></a>
+      <a class="reveal d1" href="Anh/z7485461901399_04439737f94fcc8d8d4f2b4ace38d2d6.jpg" target="_blank"><img src="Anh/z7485461901399_04439737f94fcc8d8d4f2b4ace38d2d6.jpg" alt="Không khí tiệc cưới"></a>
+      <a class="reveal d2" href="Anh/z7485462629291_38be384a97b095e8f0658cb6e4616e6e.jpg" target="_blank"><img src="Anh/z7485462629291_38be384a97b095e8f0658cb6e4616e6e.jpg" alt="Bàn tiệc setup"></a>
+    </div>
+  </div>
+</section>
+
+<!-- QUY TRÌNH -->
+<section class="sec" id="quytrinh">
+  <div class="wrap">
+    <div class="eyebrow reveal">Quy trình đặt tiệc</div>
+    <h2 class="sec-title reveal">Đơn giản 4 bước<span class="u"></span></h2>
+    <div class="steps" style="margin-top:30px">
+      <div class="step reveal"><div class="num">1</div><div><h4>Liên hệ &amp; tư vấn</h4><p>Gọi hotline hoặc nhắn Zalo, cho biết ngày tiệc và số mâm dự kiến.</p></div></div>
+      <div class="step reveal d1"><div class="num">2</div><div><h4>Chốt thực đơn</h4><p>Cùng chọn món và số lượng mâm phù hợp ngân sách và khẩu vị.</p></div></div>
+      <div class="step reveal d2"><div class="num">3</div><div><h4>Lành Mỹ lo trọn gói</h4><p>Chuẩn bị nguyên liệu tươi, dựng bếp, bàn ghế, rạp — tất cả trong tay.</p></div></div>
+      <div class="step reveal d3"><div class="num">4</div><div><h4>Phục vụ tận nơi</h4><p>Đến ngày, nấu tươi tại chỗ, phục vụ chu đáo tới khi tàn tiệc.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIÊN HỆ -->
+<section class="sec contact" id="lienhe">
+  <div class="wrap">
+    <div class="eyebrow reveal">Liên hệ đặt tiệc</div>
+    <h2 class="sec-title reveal">Gọi cho Lành Mỹ<span class="u"></span></h2>
+    <a href="tel:0985034644" class="phone-big reveal">📞 0985 034 644</a>
+    <div class="socials reveal">
+      <a class="soc" href="https://zalo.me/0985034644" target="_blank">💬 Zalo</a>
+      <a class="soc" href="https://m.me/360993427107044" target="_blank">✉️ Messenger</a>
+      <a class="soc" href="https://facebook.com/360993427107044" target="_blank">👍 Fanpage</a>
+    </div>
+    <p class="addr reveal">
+      <span class="gold">📍 Địa chỉ:</span> Nghi Phương 4 – Thần Lĩnh – Nghi Lộc, Nghệ An<br>
+      <span class="gold">🕑 Phục vụ:</span> Tiệc cưới, hỏi, liên hoan, sinh nhật, tân gia — trọn gói tận nơi<br>
+      <span class="gold">🚚 Khu vực:</span> Nghi Lộc và vùng lân cận
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">LÀNH MỸ</div>
+  <div class="fslo">"Gửi trọn yêu thương trong từng bàn tiệc"</div>
+  <div class="cr">© 2026 Nhà hàng tiệc lưu động Lành Mỹ · Hotline 0985 034 644</div>
+</footer>
+
+<!-- FLOATING -->
+<div class="floating">
+  <a href="tel:0985034644" class="fab call" aria-label="Gọi điện">📞</a>
+  <a href="https://zalo.me/0985034644" target="_blank" class="fab zalo" aria-label="Zalo">Zalo</a>
+</div>
+<button class="top-btn" id="topBtn" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="Lên đầu">&#8963;</button>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" id="lbClose" aria-label="Đóng">&times;</span>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+const nav=document.getElementById('nav'),topBtn=document.getElementById('topBtn'),drawer=document.getElementById('drawer');
+function openMenu(){drawer.classList.add('open')}
+function closeMenu(){drawer.classList.remove('open')}
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  nav.classList.toggle('scrolled',y>40);
+  topBtn.classList.toggle('show',y>500);
+});
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// logo: tu dong xoa nen navy, chi giu phan gold
+(function(){
+  const img=new Image();
+  img.onload=function(){
+    const c=document.createElement('canvas');c.width=img.width;c.height=img.height;
+    const x=c.getContext('2d');x.drawImage(img,0,0);
+    const d=x.getImageData(0,0,c.width,c.height),p=d.data;
+    let minX=c.width,minY=c.height,maxX=0,maxY=0;
+    for(let i=0;i<p.length;i+=4){
+      const r=p[i],b=p[i+2];
+      let a=(r-b+15)*6;
+      a=a<0?0:(a>255?255:a);
+      p[i+3]=a;
+      if(a>20){const idx=i/4,px=idx%c.width,py=(idx/c.width)|0;
+        if(px<minX)minX=px;if(px>maxX)maxX=px;if(py<minY)minY=py;if(py>maxY)maxY=py;}
+    }
+    if(maxX<=minX||maxY<=minY)return;
+    x.putImageData(d,0,0);
+    const pad=8;
+    minX=Math.max(0,minX-pad);minY=Math.max(0,minY-pad);
+    maxX=Math.min(c.width-1,maxX+pad);maxY=Math.min(c.height-1,maxY+pad);
+    const c2=document.createElement('canvas');
+    c2.width=maxX-minX+1;c2.height=maxY-minY+1;
+    c2.getContext('2d').drawImage(c,minX,minY,c2.width,c2.height,0,0,c2.width,c2.height);
+    const url=c2.toDataURL('image/png');
+    document.querySelectorAll('.logo-img').forEach(el=>{el.src=url;el.style.visibility='visible'});
+  };
+  img.src='logo-lanhmy.jpg';
+})();
+// lightbox: cham vao anh de phong to
+(function(){
+  const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),
+        lbCap=document.getElementById('lbCap'),lbClose=document.getElementById('lbClose');
+  function open(src,cap){
+    lbImg.src=src;lbImg.classList.remove('zoomed');
+    lbCap.textContent=cap||'';lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function close(){lb.classList.remove('open');document.body.style.overflow='';lbImg.classList.remove('zoomed');}
+  // anh mon an
+  document.querySelectorAll('.dish .thumb img').forEach(img=>{
+    img.addEventListener('click',()=>{
+      const h=img.closest('.dish').querySelector('h4');
+      open(img.getAttribute('src'),h?h.textContent:'');
+    });
+  });
+  // anh khong gian tiec
+  document.querySelectorAll('.gallery a').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      const img=a.querySelector('img');
+      open(a.getAttribute('href'),img?img.getAttribute('alt'):'');
+    });
+  });
+  // cham lan nua de phong to hon / thu nho
+  lbImg.addEventListener('click',e=>{e.stopPropagation();lbImg.classList.toggle('zoomed');});
+  lbClose.addEventListener('click',close);
+  lb.addEventListener('click',close);
+  addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+})();
+
+// menu filter
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  const f=t.dataset.f;
+  document.querySelectorAll('.dish').forEach(d=>{
+    const show=(f==='all'||d.dataset.cat===f);
+    d.style.display=show?'':'none';
+  });
+}));
+</script>
+</body>
+</html>
