@@ -195,7 +195,7 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
 
 @media(min-width:600px){
   .hero h1{font-size:66px}
-  .feats{grid-template-columns:repeat(3,1fr)}
+  .feats{grid-template-columns:repeat(2,1fr)}
   .menu-grid{grid-template-columns:1fr 1fr}
 }
 
@@ -237,8 +237,8 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
     LÀNH MỸ
   </a>
   <div class="nav-links">
-    <a href="#gioithieu">Giới thiệu</a>
     <a href="#thucdon">Thực đơn</a>
+    <a href="#gioithieu">Giới thiệu</a>
     <a href="#khonggian">Không gian tiệc</a>
     <a href="#quytrinh">Quy trình</a>
     <a href="#lienhe">Liên hệ</a>
@@ -251,8 +251,8 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
 
 <div class="menu-drawer" id="drawer">
   <span class="close" onclick="closeMenu()">&times;</span>
-  <a href="#gioithieu" onclick="closeMenu()">Giới thiệu</a>
   <a href="#thucdon" onclick="closeMenu()">Thực đơn</a>
+  <a href="#gioithieu" onclick="closeMenu()">Giới thiệu</a>
   <a href="#khonggian" onclick="closeMenu()">Không gian tiệc</a>
   <a href="#quytrinh" onclick="closeMenu()">Quy trình</a>
   <a href="#lienhe" onclick="closeMenu()">Liên hệ</a>
@@ -269,21 +269,7 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
     <a href="tel:0985034644"><button class="cta-primary">📞 Gọi đặt tiệc</button></a>
     <a href="#thucdon"><button class="cta-ghost">Xem thực đơn</button></a>
   </div>
-  <a href="#gioithieu" class="scroll-ind">&#8964;</a>
-</section>
-
-<!-- GIỚI THIỆU -->
-<section class="sec" id="gioithieu">
-  <div class="wrap">
-    <div class="eyebrow reveal">Nhà hàng tiệc lưu động</div>
-    <h2 class="sec-title reveal">Vì sao chọn Lành Mỹ<span class="u"></span></h2>
-    <p class="sec-sub reveal">Chuyên tiệc trọn gói tận nhà và công sở tại Nghi Lộc, Nghệ An — nấu tươi tại chỗ, phục vụ tận tâm, mâm đầy đặn đáng đồng tiền.</p>
-    <div class="feats">
-      <div class="feat reveal d1"><div class="ic">🔥</div><div><h3>Nấu tươi tại chỗ</h3><p>Bếp dựng ngay tại tiệc, món ra nóng hổi, thơm ngon đúng vị.</p></div></div>
-      <div class="feat reveal d2"><div class="ic">🍽️</div><div><h3>Mâm đầy đặn</h3><p>Món nhiều, bày đẹp, khách ăn no – ngon – nhớ mãi.</p></div></div>
-      <div class="feat reveal d3"><div class="ic">❤️</div><div><h3>Phục vụ tận tâm</h3><p>Lo trọn gói từ A–Z, chủ nhà chỉ việc tiếp khách.</p></div></div>
-    </div>
-  </div>
+  <a href="#thucdon" class="scroll-ind">&#8964;</a>
 </section>
 
 <!-- THỰC ĐƠN -->
@@ -302,6 +288,16 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
     </div>
 
     <div class="menu-grid" id="grid">
+
+      <!-- MÓN NỔI BẬT LÊN ĐẦU -->
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img loading="lazy" decoding="async" src="Anh/z7740270742961_c9716d08a9c3500b2577e05d88f7ae0e.jpg" alt="Tôm chiên Hoàng Bào"></div>
+        <div class="info"><h4>Tôm chiên Hoàng Bào</h4><p>Tôm chiên vàng giòn xếp hoa trên ổ khoai sợi — giòn rụm, đẹp mắt.</p></div>
+      </div>
+      <div class="dish reveal" data-cat="sea">
+        <div class="thumb"><img loading="lazy" decoding="async" src="Anh/oc-huong.jpg" alt="Ốc hương hấp sả"></div>
+        <div class="info"><h4>Ốc hương hấp sả</h4><p>Ốc hương hấp sả ớt thơm nồng, xếp kèm hoa cà rốt tỉa đẹp mắt.</p></div>
+      </div>
 
       <!-- THỊT & MÓN CHÍNH (đẹp trên, xấu dưới) -->
       <div class="dish reveal" data-cat="main">
@@ -333,14 +329,6 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
       <div class="dish reveal" data-cat="sea">
         <div class="thumb"><span class="badge">Mới</span><img loading="lazy" decoding="async" src="Anh/z7897663970076_dc90609902708c34375e6685061caed1.jpg" alt="Tôm sốt chanh dây"></div>
         <div class="info"><h4>Tôm sốt chanh dây</h4><p>Tôm chiên phủ sốt chanh dây vàng óng, chua ngọt lạ miệng, màu rất bắt mắt.</p></div>
-      </div>
-      <div class="dish reveal" data-cat="sea">
-        <div class="thumb"><img loading="lazy" decoding="async" src="Anh/z7740270742961_c9716d08a9c3500b2577e05d88f7ae0e.jpg" alt="Tôm chiên Hoàng Bào"></div>
-        <div class="info"><h4>Tôm chiên Hoàng Bào</h4><p>Tôm chiên vàng giòn xếp hoa trên ổ khoai sợi — giòn rụm, đẹp mắt.</p></div>
-      </div>
-      <div class="dish reveal" data-cat="sea">
-        <div class="thumb"><img loading="lazy" decoding="async" src="Anh/oc-huong.jpg" alt="Ốc hương hấp sả"></div>
-        <div class="info"><h4>Ốc hương hấp sả</h4><p>Ốc hương hấp sả ớt thơm nồng, xếp kèm hoa cà rốt tỉa đẹp mắt.</p></div>
       </div>
       <div class="dish reveal" data-cat="sea">
         <div class="thumb"><img loading="lazy" decoding="async" src="Anh/z8059681869336_463cf99d13cc36b28df831387faea815.jpg" alt="Cá bống mú hấp xì dầu Hồng Kông"></div>
@@ -397,6 +385,21 @@ footer .cr{font-size:11px;color:#5c6b5d;margin-top:14px}
 
     </div>
     <p class="menu-note reveal">Thực đơn có thể điều chỉnh theo số mâm, ngân sách và khẩu vị của gia đình. Liên hệ để được tư vấn chi tiết.</p>
+  </div>
+</section>
+
+<!-- GIỚI THIỆU -->
+<section class="sec" id="gioithieu">
+  <div class="wrap">
+    <div class="eyebrow reveal">Nhà hàng tiệc lưu động</div>
+    <h2 class="sec-title reveal">Vì sao chọn Lành Mỹ<span class="u"></span></h2>
+    <p class="sec-sub reveal">Chuyên tiệc trọn gói tận nhà và công sở tại Nghi Lộc, Nghệ An — nấu tươi tại chỗ, phục vụ tận tâm, mâm đầy đặn đáng đồng tiền.</p>
+    <div class="feats">
+      <div class="feat reveal d1"><div class="ic">🔥</div><div><h3>Nấu tươi tại chỗ</h3><p>Bếp dựng ngay tại tiệc, món ra nóng hổi, thơm ngon đúng vị.</p></div></div>
+      <div class="feat reveal d2"><div class="ic">🍽️</div><div><h3>Mâm đầy đặn</h3><p>Món nhiều, bày đẹp, khách ăn no – ngon – nhớ mãi.</p></div></div>
+      <div class="feat reveal d3"><div class="ic">❤️</div><div><h3>Phục vụ tận tâm</h3><p>Lo trọn gói từ A–Z, chủ nhà chỉ việc tiếp khách.</p></div></div>
+      <div class="feat reveal d4"><div class="ic">🌿</div><div><h3>Thực đơn đa dạng</h3><p>Món phong phú, cập nhật theo mùa — luôn có món tươi mới theo từng thời điểm.</p></div></div>
+    </div>
   </div>
 </section>
 
